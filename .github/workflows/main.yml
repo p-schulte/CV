@@ -1,41 +1,59 @@
 # .github/workflows/build-pdf.yml
-name: Build LaTeX PDF
+name: Build LaTeX PDF and push to branch
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
+    branches: [ main ]   # only build on main to avoid loops
+  workflow_dispatch:
+
+permissions:
+  contents: write        # allow pushing with GITHUB_TOKEN
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # Optional but recommended: cache TeXLive packages for speed
-      - name: Cache TeXLive
-        uses: actions/cache@v4
         with:
-          path: ~/.texlive
-          key: texlive-${{ runner.os }}-${{ hashFiles('**/*.tex', '**/*.sty', '**/*.cls', '**/*.bib') }}
+          fetch-depth: 0   # we’ll switch to another branch later
 
       - name: Compile LaTeX
-      # Docs: https://github.com/xu-cheng/latex-action
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex         # change if your entry file is different
-          latexmk_shell_escape: true  # set false if you don't need shell-escape
-          extra_system_packages: >-
-            fontconfig
-            ghostscript
-          # If you use biber:
-          # compiler: lualatex
-          # args: -synctex=1 -interaction=nonstopmode
+          root_file: main.tex
 
+      # --- Commit PDF to the `pdf` branch using a worktree ---
+      - name: Push PDF to `pdf` branch
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          set -e
+          PDF_NAME=paper.pdf                 # change if you want a different filename
+          OUT_DIR=/tmp/pdf-branch
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Create or fetch the target branch into a separate worktree
+          if git ls-remote --exit-code --heads origin pdf; then
+            git fetch origin pdf:pdf
+            git worktree add "$OUT_DIR" pdf
+          else
+            git worktree add -b pdf "$OUT_DIR"
+          fi
+
+          # Copy the fresh PDF into the worktree
+          cp main.pdf "$OUT_DIR/$PDF_NAME"
+
+          # Commit & push (skip CI to avoid triggering other workflows)
+          cd "$OUT_DIR"
+          git add -A
+          git commit -m "ci: update PDF for $GITHUB_SHA [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:pdf
+
+      # (optional) still upload as CI artifact
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: paper-pdf
-          path: main.pdf              # or out/main.pdf depending on your setup
+          path: main.pdf
