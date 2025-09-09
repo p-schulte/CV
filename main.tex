@@ -1,0 +1,247 @@
+%-------------------------
+% Resume in Latex
+% Author : Paul Schulte
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{fontawesome}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+      \small#3 & \small#4
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \small#2
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Paul Schulte} \\ \vspace{1pt}
+    \small
+    \href{https://p-schulte.github.io}{\underline{p-schulte.github.io}} 
+    $|$ 
+    \href{mailto:paul.schulte@rwth-aachen.de}{\underline{paul.schulte@rwth-aachen.de}}
+    $|$ \href{https://www.linkedin.com/in/paul-schulte-607085218/}{\underline{LinkedIn}} 
+\end{center}
+
+
+
+\section{Education}
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{RWTH Aachen University}}{Oct 2025 -- present}
+      {M.Sc. Computer Science}{Aachen, GER}
+    \resumeItemListStart
+       \resumeItem{Currently enrolled, specializing in Machine Learning, Algorithms, and Graph Theory (planned focus).}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{RWTH Aachen University}}{Oct 2022 -- Aug 2025}
+      {B.Sc. Computer Science}{Aachen, GER}
+    \resumeItemListStart
+       \resumeItem{\textbf{GPA}: 1.1/1.0 (with distinction)}
+       \resumeItem{\textbf{Dean's List}: Top 5\% of the academic years 2022/23 and 2024/25}
+       \resumeItem{\textbf{Relevant Coursework}: 
+        Elements of Machine Learning and Data Science (1.0),
+        Data Structures and Algorithms (1.0),
+        Computability and Complexity (1.0)
+       }
+       \resumeItem{\textbf{Accelerated completion}: finished the program in 5 out of 6 semesters}
+        \resumeItem{\textbf{Final thesis}: Action Classification Through Dynamic Scene Graph Generation From Image Sequences \\ \textbf{(Grade: 1.0)}} \href{https://ml.rwth-aachen.de//theses/schulte2025.pdf}{\faExternalLink}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{Aalto University}}{Aug 2024 -- Dec 2024}
+      {Semester Abroad (B.Sc. Computer Science)}{Espoo--Helsinki, FI}
+    \resumeItemListStart
+       \resumeItem{\textbf{GPA}: 5.0/5.0}
+       \resumeItem{\textbf{Relevant Coursework}: 
+       Graph Theory,
+       Machine Learning,
+       Competitive Programming,
+       Distributed Algorithms
+       }
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+    
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{Joseph König Gymnasium}}{Sep 2014 -- Jun 2022}
+      {A-Levels, German Abitur}{Haltern am See, GER}
+    \resumeItemListStart
+       \resumeItem{\textbf{GPA:} 1.2/1.0}
+       \resumeItem{Graduated top of the year in mathematics, physics, and computer science}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience} 
+  \resumeSubHeadingListStart 
+    \resumeSubheading 
+      {\textbf{Robotics Institute, Carnegie Mellon University}}{Pittsburgh, PA, USA} 
+      {Undergraduate Research Intern, Robotics Institute Summer Scholars Program}{May 2024 -- Sep 2024} 
+      \resumeItemListStart 
+        \resumeItem{Conducted research in Control Theory, Path Planning, and Autonomous Vehicles} 
+        \resumeItem{Developed a Model Predictive Control (MPC) framework enhanced with Control Barrier Functions (CBFs) to provide safety guarantees during trajectory planning} 
+        \resumeItem{Implemented real-time computations using JAX-Python on CPUs on F1Tenth hardware, reducing dependency on costly GPUs compared to state-of-the-art methods} 
+      \resumeItemListEnd 
+  \resumeSubHeadingListEnd
+  
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{Siemens Logistics}}{Düsseldorf, GER}
+      {Software Engineering Working Student}{Feb 2023 -- Nov 2023}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented new features (in C\#) for a software tool supporting airport baggage handling system design}
+        \resumeItem{Optimized conveyor-belt system analysis tools used worldwide, reducing computation time by up to 90\%}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+      
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading{\textbf{Math Exercise Generator} $|$ \textit{JavaScript, HTML, Vue.js}}{Sep 2023 -- Oct 2023}
+        \resumeItemListStart
+            \resumeItem{Developed a free-to-use linear algebra exercise generator with automatic solution generation}
+        \resumeItemListEnd
+
+        \resumeProjectHeading{\textbf{Report on Neuroevolution of Fixed Topologies \href{https://github.com/PaulSchulteSythen/Facharbeit/blob/master/Facharbeit.pdf}{\faExternalLink}} $|$ \textit{RL, Python, OpenAI Gym}}{2021}
+        \resumeItemListStart
+            \resumeItem{Implemented neural networks from and an evolutionary algorithm from scratch}
+            \resumeItem{Authored a report applying the algorithm to OpenAI Gym environments}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------DISTINCTIONS-----------
+\section{Distinctions}
+ \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{DAAD Scholarship: RISE Worldwide}}{Mar 2024}
+          \resumeItemListStart
+            \resumeItem{Scholarship awarded to German Bachelor students in natural sciences and engineering for research internships abroad}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{German Mathematical Society}}{Jun 2022}
+          \resumeItemListStart
+            \resumeItem{Admitted as a student member in recognition of strong mathematics performance in high school}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{German Physical Society}}{Jun 2022}
+          \resumeItemListStart
+            \resumeItem{Admitted as a student member in recognition of high school achievements in physics and mathematics}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: German (native), English (C1)} \\
+     \textbf{Programming}{: Python, Java, C++, C\#} \\
+     \textbf{Tools \& Platforms}{: \LaTeX, Linux, Git, Docker}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
