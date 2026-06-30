@@ -39,13 +39,14 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.1pt}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -55,8 +56,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -65,7 +66,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
@@ -74,14 +75,14 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       #1 & #2 \\
       \small#3 & \small#4
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \small#1 & \small#2
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
@@ -98,7 +99,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,6 +114,8 @@
     \href{https://p-schulte.github.io}{p-schulte.github.io} 
     $|$ 
     \href{mailto:paul.schulte@rwth-aachen.de}{paul.schulte@rwth-aachen.de}
+    $|$ 
+    \href{https://github.com/PaulSchulteSythen}{GitHub}
     $|$ 
     \href{https://www.linkedin.com/in/paul-schulte-607085218/}{LinkedIn}
 \end{center}
@@ -132,30 +135,24 @@
 \resumeSubHeadingListStart
 \resumeSubheading
     {\textbf{RWTH Aachen University}}{Oct 2025 -- Present}
-    {M.Sc. Computer Science}{Aachen, Germany}
+    {M.Sc. Computer Science; GPA: 1.2 (1.0 best)}{Aachen, Germany}
 \resumeItemListStart
-    \resumeItem{Current \textbf{GPA}: 1.2 (1.0 best)}
-    \resumeItem{Specialization in Machine Learning, Optimization, Algorithms, and Graph Theory}
-    \resumeItem{\textbf{Key Coursework}: Algorithmic Foundations of Data Science (1.3), Machine Learning on Graphs (1.0)}
+    \resumeItem{\textbf{Focus}: Machine Learning, Optimization, Algorithms, and Graph Theory}
 \resumeItemListEnd
 
 \resumeSubheading
     {\textbf{RWTH Aachen University}}{Oct 2022 -- Aug 2025}
-    {B.Sc. Computer Science}{Aachen, Germany}
+    {B.Sc. Computer Science; GPA: 1.1 with distinction (1.0 best)}{Aachen, Germany}
 \resumeItemListStart
-    \resumeItem{\textbf{GPA}: 1.1 (with distinction; 1.0 best)}
-    \resumeItem{\textbf{Dean’s List}: Top 5\% of cohort across all semesters}
-    \resumeItem{\textbf{Accelerated degree}: Completed in 5 out of 6 semesters}
-    \resumeItem{\textbf{Key Coursework}: Machine Learning and Data Science (1.0), Data Structures and Algorithms (1.0), Computability and Complexity (1.0)}
+    \resumeItem{\textbf{Dean’s List}: Top 5\% of cohort across all semesters; completed degree in 5 of 6 semesters}
     \resumeItem{\textbf{Bachelor Thesis}: \textit{Action Classification Through Dynamic Scene Graph Generation from Image Sequences} (Grade: 1.0) \href{https://ml.rwth-aachen.de//theses/schulte2025.pdf}{\faExternalLink}}
 \resumeItemListEnd
 
 \resumeSubheading
     {\textbf{Aalto University}}{Aug 2024 -- Dec 2024}
-    {Semester Abroad (Computer Science)}{Espoo, Finland}
+    {Semester Abroad, Computer Science; GPA: 5.0 / 5.0}{Espoo, Finland}
 \resumeItemListStart
-    \resumeItem{\textbf{GPA}: 5.0 / 5.0}
-    \resumeItem{\textbf{Coursework}: Graph Theory, Machine Learning, Competitive Programming, Distributed Algorithms}
+    \resumeItem{\textbf{Coursework}: Competitive Programming, Distributed Algorithms, Graph Theory}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -167,19 +164,49 @@
     {\textbf{RWTH Aachen University, Chair for Machine Learning and Inference (i6)}}{Aachen, Germany}
     {Graduate Research Assistant}{Sep 2025 -- Present}
 \resumeItemListStart
-    \resumeItem{Extended Bachelor thesis research on dynamic scene graphs for action classification}
-    \resumeItem{Equal-contribution first author on a paper presented at the GenPlan Workshop at ICAPS 2026}
-    \resumeItem{Researching how to learn discrete, relational structues from images in a self-supervised fashion}
+    \resumeItem{Researching self-supervised learning of discrete relational structures from image sequences}
+    \resumeItem{Extended thesis work on dynamic scene graph generation for action classification}
+    \resumeItem{Equal-contribution first author of an oral GenPlan Workshop paper at ICAPS 2026}
 \resumeItemListEnd
 
 \resumeSubheading
     {\textbf{Robotics Institute, Carnegie Mellon University}}{Pittsburgh, PA, USA}
     {Undergraduate Research Intern (RISE Worldwide)}{May 2024 -- Sep 2024}
 \resumeItemListStart
-    \resumeItem{Conducted research in control theory, trajectory planning, and autonomous driving}
-    \resumeItem{Developed a Model Predictive Control (MPC) framework with Control Barrier Functions (CBFs) for safety-critical planning}
-    \resumeItem{Implemented real-time MPC in JAX on CPU-based F1TENTH hardware, reducing reliance on GPU-heavy approaches}
-     \resumeItem{Co-authored the USDOT/Safety21 final report \textit{Risk-Aware Warning and Control for Interactive Traffic Safety} \href{https://scholar.google.com/citations?view_op=view_citation\&hl=de\&user=elk9fuYAAAAJ\&citation_for_view=elk9fuYAAAAJ:qjMakFHDy7sC}{\faExternalLink}}
+    \resumeItem{Developed an MPC framework with Control Barrier Functions for safety-critical trajectory planning}
+    \resumeItem{Implemented real-time planning in JAX for CPU-based F1TENTH hardware, reducing reliance on GPU-heavy approaches}
+    \resumeItem{Co-authored the USDOT/Safety21 final report \textit{Risk-Aware Warning and Control for Interactive Traffic Safety} \href{https://scholar.google.com/citations?view_op=view_citation\&hl=de\&user=elk9fuYAAAAJ\&citation_for_view=elk9fuYAAAAJ:qjMakFHDy7sC}{\faExternalLink}}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+    {\textbf{Siemens Logistics}}{Düsseldorf, Germany}
+    {Software Engineering Working Student}{Feb 2023 -- Nov 2024}
+\resumeItemListStart
+    \resumeItem{Designed and implemented C\# features for an airport baggage handling system planning tool}
+    \resumeItem{Optimized computationally intensive planning components, reducing runtime by up to 80\%}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Selected Projects}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Math Exercise Generator} $|$ \textit{JavaScript, HTML, Vue.js}}{2023}
+\resumeItemListStart
+    \resumeItem{Built a web-based linear algebra exercise generator with automatic solution computation}
+\resumeItemListEnd
+
+\resumeProjectHeading
+    {\textbf{Neuroevolution of Fixed Topologies} \href{https://github.com/PaulSchulteSythen/Facharbeit/blob/master/Facharbeit.pdf}{\faExternalLink} $|$ \textit{Python, Reinforcement Learning}}{2021}
+\resumeItemListStart
+    \resumeItem{Implemented neural networks and evolutionary algorithms from scratch}
+    \resumeItem{Applied methods to OpenAI Gym environments and documented results in a technical report}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -191,73 +218,9 @@
 \item{
 Ulzhalgas Rakhman*, \textbf{Paul Schulte}*, Hector Geffner.
 \textit{Learning Lifted Symbolic Planning Domains from Image Sequences (VISA)}.
-GenPlan Workshop at ICAPS 2026. Oral presentation, Dublin.
-*Equal contribution.
+GenPlan Workshop at ICAPS 2026. Oral presentation. *Equal contribution.
 }}
 \end{itemize}
-
-%-----------PROFESSIONAL EXPERIENCE-----------
-\section{Professional Experience}
-
-\resumeSubHeadingListStart
-\resumeSubheading
-    {\textbf{Siemens Logistics}}{Düsseldorf, Germany}
-    {Software Engineering Working Student}{Feb 2023 -- Nov 2024}
-\resumeItemListStart
-    \resumeItem{Designed and implemented C\# features for a large-scale airport baggage handling system planning tool}
-    \resumeItem{Optimized computationally intensive components, achieving runtime reductions of up to 80\%}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-\begin{comment}
-\section{Selected Projects}
-
-\resumeSubHeadingListStart
-\resumeProjectHeading
-    {\textbf{Math Exercise Generator} $|$ \textit{JavaScript, HTML, Vue.js}}{2023}
-\resumeItemListStart
-    \resumeItem{Built a free web-based linear algebra exercise generator with automatic solution computation}
-\resumeItemListEnd
-
-\resumeProjectHeading
-    {\textbf{Neuroevolution of Fixed Topologies} \href{https://github.com/PaulSchulteSythen/Facharbeit/blob/master/Facharbeit.pdf}{\faExternalLink} $|$ \textit{Python, Reinforcement Learning}}{2021}
-\resumeItemListStart
-    \resumeItem{Implemented neural networks and evolutionary algorithms from scratch}
-    \resumeItem{Applied methods to OpenAI Gym environments and documented results in a technical report}
-\resumeItemListEnd
-
-\resumeProjectHeading
-    {\textbf{Hanging Wall Plotter} \href{https://github.com/PaulSchulteSythen/hanging_wall_plotter_2019/blob/main/documentation_german.pdf}{\faExternalLink} $|$ \textit{Python, Raspberry Pi}}{2019}
-\resumeItemListStart
-    \resumeItem{Designed and programmed a two-motor wall-mounted plotter}
-    \resumeItem{Converted PNG images to G-code and executed motion control}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-\end{comment}
-
-%-----------HONORS-----------
-\section{Honors \& Distinctions}
-
-\resumeSubHeadingListStart
-\resumeProjectHeading
-    {\textbf{DAAD RISE Worldwide Scholarship}}{2024}
-\resumeItemListStart
-    \resumeItem{Competitive research scholarship for international STEM internships}
-\resumeItemListEnd
-
-\resumeProjectHeading
-    {\textbf{German Mathematical Society (DMV)}}{2022}
-\resumeItemListStart
-    \resumeItem{Student membership awarded for outstanding performance in mathematics during high school}
-\resumeItemListEnd
-
-\resumeProjectHeading
-    {\textbf{German Physical Society (DPG)}}{2022}
-\resumeItemListStart
-    \resumeItem{Student membership awarded for outstanding performance in mathematics during high school}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
 
 %-----------SKILLS-----------
 \section{Technical Skills}
@@ -265,10 +228,22 @@ GenPlan Workshop at ICAPS 2026. Oral presentation, Dublin.
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{
 \item{
-\textbf{Languages}: German (native), English (C1) \\
-\textbf{Programming}: Python, C++, Java, C\# \\
+\textbf{Programming}: Python, C++, Java, C\#, JavaScript \\
+\textbf{ML / Scientific Computing}: JAX, NumPy, Machine Learning, Optimization \\
 \textbf{Tools}: Linux, Git, Docker, \LaTeX \\
-\textbf{Core Strengths}: Algorithms, Data Structures, Graph Theory, Mathematical Modeling
+\textbf{Languages}: German (native), English (C1)
+}}
+\end{itemize}
+
+%-----------HONORS-----------
+\section{Honors \& Distinctions}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{
+\textbf{DAAD RISE Worldwide Scholarship} (2024) $|$
+\textbf{German Mathematical Society} student member (2022) $|$
+\textbf{German Physical Society} student member (2022)
 }}
 \end{itemize}
 
